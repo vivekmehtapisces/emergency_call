@@ -5,44 +5,153 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Emergency Contacts — India</title>
 <style>
-  :root{--bg:#f7f7f7;--card:#fff;--accent:#0b5cff;--danger:#e23b3b;}
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#111;background:var(--bg);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px;}
-  .card{background:var(--card);max-width:540px;width:100%;padding:15px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08);}
-  h1{margin:0 0 8px;font-size:22px;}
-  p.lead{margin:0 0 18px;color:#444;}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .btn{display:flex;flex-direction:column;align-items:flex-start;padding:12px 14px;border-radius:10px;text-decoration:none;border:1px solid #eee;background:#fafafa;color:#111;}
-  .btn strong{font-size:16px;}
-  .btn small{color:#666;margin-top:6px;}
-  .foot{margin-top:14px;font-size:13px;color:#666;}
-  .big{grid-column:span 2;display:flex;justify-content:center;}
-  .danger{background:#fff6f6;border-color:#ffd6d6;}
-  .note{margin-top:12px;font-size:13px;color:#a33;}
-  .actions{display:flex;gap:8px;margin-top:16px;}
-  .bigbtn{flex:1;padding:14px;border:none;border-radius:10px;font-weight:600;font-size:16px;cursor:pointer;}
-  .pick{background:#fafafa;border:1px solid #ccc;}
-  .call{background:var(--accent);color:#fff;}
-  input[type="tel"]{width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-top:10px;}
-  .hint{font-size:12px;color:#777;margin-top:8px;}
+  :root {
+    --bg: #f7f7f7;
+    --card: #fff;
+    --accent: #0b5cff;
+    --danger: #e23b3b;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    color: #111;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .card {
+    background: var(--card);
+    max-width: 380px; /* reduced width */
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p.lead {
+    margin: 0 0 18px;
+    color: #444;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #d0d8ff;
+    background: #f5f9ff;
+    color: var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .btn strong {
+    font-size: 16px;
+  }
+
+  .btn small {
+    color: #3366ff;
+    margin-top: 4px;
+  }
+
+  .btn:hover {
+    background: #e8f0ff;
+    border-color: var(--accent);
+  }
+
+  .foot {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #a33;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .bigbtn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .pick {
+    background: #f0f4ff;
+    border: 1px solid #b3c4ff;
+    color: var(--accent);
+  }
+
+  .pick:hover {
+    background: #dce7ff;
+  }
+
+  .call {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+  }
+
+  .hint {
+    font-size: 12px;
+    color: #777;
+    margin-top: 8px;
+  }
 </style>
 </head>
 <body>
   <div class="card">
-    <h1>Emergency Contacts</h1>
-    <p class="lead">Tap to call emergency services, or set your own quick dial contact below.</p>
+    <h1><p style="margin:0px;font-size:25px;"><u>Emergency Contacts</u></p></h1>
+    <p class="lead" style="font-size:18px;font-weight:bold;">Tap to call emergency services, or set your own quick dial contact below.</p>
 
     <div class="grid">
-      <a class="btn" href="tel:100"><strong>Police — 100</strong><small>Immediate police assistance</small></a>
-      <a class="btn" href="tel:101"><strong>Fire — 101</strong><small>Fire & rescue</small></a>
-      <a class="btn" href="tel:102"><strong>Ambulance — 102</strong><small>Medical ambulance</small></a>
-      <a class="btn" href="tel:112"><strong>All-in-one — 112</strong><small>Single emergency number (police/fire/ambulance)</small></a>
-      <a class="btn" href="tel:181"><strong>Women Helpline — 181</strong><small>Support for women</small></a>
+      <a class="btn" href="tel:100"><strong><p style="margin:0px;font-size:22px;">Police — 100</p></strong><small>Immediate police assistance</small></a>
+      <a class="btn" href="tel:101"><strong><p style="margin:0px;font-size:22px;">Fire — 101</p></strong><small>Fire & rescue</small></a>
+      <a class="btn" href="tel:102"><strong><p style="margin:0px;font-size:22px;">Ambulance — 102</p></strong><small>Medical ambulance</small></a>
+      <a class="btn" href="tel:112"><strong><p style="margin:0px;font-size:22px;">All-in-one — 112</p></strong><small>Single emergency number (police/fire/ambulance)</small></a>
+      <a class="btn" href="tel:181"><strong><p style="margin:0px;font-size:22px;">Women Helpline — 181</p></strong><small>Support for women</small></a>
     </div>
 
     <hr style="margin:15px 0;border:none;border-top:1px solid #eee;">
 
     <h2 style="font-size:18px;margin-bottom:8px;">Your Personal Emergency Contact</h2>
-    <!-- <div id="status" style="font-size:13px;color:#666;margin-bottom:10px;">Checking capabilities...</div> -->
 
     <div class="actions">
       <button id="pickContact" class="bigbtn pick">📇 Pick Contact</button>
@@ -50,52 +159,47 @@
 
     <input id="manualInput" type="tel" placeholder="+91 98xxxxxxxx" style="display:none" />
     <button id="callNow" class="bigbtn call" style="display:none;margin-top:12px;">📞 Call <span id="callLabel"></span></button>
-    <div id="chosen" style="font-size:13px;margin-top:10px;color:#333;">No number chosen yet.</div>
-    <div class="hint" id="hint" style="display:none"></div>
+    <div id="chosen" style="font-size:15px;margin-top:10px;color:#333;font-weight:bold;">No number chosen yet.</div>
+    <div class="hint" id="hint" style="display:none;font-size:15px;font-weight:bold;"></div>
 
-    <div class="foot">Your browser may ask for permission to access contacts. Calls still require manual confirmation.</div>
-    <div class="note">Note: This tool cannot auto-dial without your consent.</div>
+    <div class="foot" style="font-size:15px;font-weight:bold;">Your browser may ask for permission to access contacts. Calls still require manual confirmation.</div>
+    <div class="note" style="font-size:15px;font-weight:bold;">Note: This tool cannot auto-dial without your consent.</div>
   </div>
 
   <script>
   (function(){
     const pickBtn = document.getElementById('pickContact');
-    const manualBtn = document.getElementById('manualBtn');
     const manualInput = document.getElementById('manualInput');
     const callNow = document.getElementById('callNow');
     const callLabel = document.getElementById('callLabel');
     const chosen = document.getElementById('chosen');
-    const status = document.getElementById('status');
     const hint = document.getElementById('hint');
 
     const STORAGE_KEY = 'emergency_speed_dial_number';
     const hasContactPicker = ('contacts' in navigator) && typeof navigator.contacts.select === 'function';
 
-    //status.textContent = hasContactPicker ? 'Contact Picker API is available.' : 'Contact Picker not available — manual entry only.';
     hint.style.display = 'block';
     hint.textContent = hasContactPicker
       ? 'You can pick a saved contact from your device securely.'
       : 'Enter a phone number manually to save it locally.';
 
-    function normalize(n){ return n ? n.replace(/[\s()\-]/g,'').trim() : ''; }
+    function normalize(n){ return n ? n.replace(/[\s()\\-]/g,'').trim() : ''; }
 
     function updateUI(num){
       if(num){
         chosen.innerHTML = 'Saved number: <strong>'+num+'</strong>';
         callLabel.textContent = num;
         callNow.style.display = 'block';
-      } 
-	  <!-- else { -->
-        <!-- chosen.textContent = 'No number chosen yet.'; -->
-        <!-- callNow.style.display = 'none'; -->
-      <!-- } -->
+      } else {
+        chosen.textContent = 'No number chosen yet.';
+        callNow.style.display = 'none';
+      }
     }
 
     const stored = localStorage.getItem(STORAGE_KEY);
     updateUI(stored);
 
     pickBtn.addEventListener('click', async ()=>{
-      <!-- if(!hasContactPicker){ alert('Contact Picker not supported. Use manual entry.'); return; } -->
       try{
         const contacts = await navigator.contacts.select(['tel','name'], {multiple:false});
         if(contacts.length){
@@ -108,11 +212,6 @@
           }
         }
       }catch(e){ console.error(e); alert('Failed to pick contact.'); }
-    });
-
-    manualBtn.addEventListener('click',()=>{
-      manualInput.style.display = manualInput.style.display==='none'?'block':'none';
-      manualInput.focus();
     });
 
     manualInput.addEventListener('keyup',(e)=>{
